@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     "book",
     {
       ISBN: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
         unique: true,
       },
