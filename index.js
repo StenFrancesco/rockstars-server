@@ -153,14 +153,11 @@ const test = 'test conflict'
 const authRouter = require("./routers/auth");
 app.use("/", authRouter);
 
-
-app.post("/addBook", async (req, res, next) => {
-  
-});
+const categoryRouter = require("./routers/homepage");
+app.use("/category", categoryRouter)
 
 const booksRouter = require("./routers/books");
 app.use("/", booksRouter);
-
 
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
