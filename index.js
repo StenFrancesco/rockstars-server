@@ -126,8 +126,8 @@ app.get("/", (req, res) => {
 app.post("/echo", (req, res) => {
   res.json({
     youPosted: {
-      ...req.body
-    }
+      ...req.body,
+    },
   });
 });
 
@@ -140,11 +140,11 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 
   res.json({
     youPosted: {
-      ...req.body
+      ...req.body,
     },
     userFoundWithToken: {
-      ...user.dataValues
-    }
+      ...user.dataValues,
+    },
   });
 });
 
@@ -156,4 +156,66 @@ const { PORT } = require("./config/constants");
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
+});
+
+const Category = require("./models").category;
+app.post("/categorie", async (req, res, next) => {
+  const row = await Category.create({
+    name: "Bla",
+    imageUrl: "balbala",
+  });
+  res.send(row);
+});
+
+const Books = require("./models").book;
+app.post("/books", async (req, res, next) => {
+  const row = await Books.create({
+    ISBN: 91834,
+    name: "Blabla",
+    author: "lajd",
+    description: "kjahdf",
+    price: 9.6,
+    imageUrl: "balbala",
+    categoryId: 1,
+    price_percentage: 100,
+  });
+  res.send(row);
+});
+
+const Orders = require("./models").order;
+app.post("/order", async (req, res, next) => {
+  const row = await Orders.create({
+    order_placed: true,
+    userId: 1,
+  });
+  res.send(row);
+});
+
+const Users = require("./models").user;
+app.post("/user", async (req, res, next) => {
+  const row = await Users.create({
+    first_name: "kjadshf",
+    last_name: "kjhadf",
+    street: "hasdf",
+    postal_code: "5839PA",
+    house_number: 19,
+    city: "Amsterdam",
+    country: "Netherlands",
+    phone: 489572,
+    isAdmin: false,
+    email: "test@gmail.com",
+    password: "nicenice",
+  });
+  res.send(row);
+});
+
+const OrderDetails = require("./models").orderDetail;
+app.post("/order_details", async (req, res, next) => {
+  const row = await OrderDetails.create({
+    bookId: 1,
+    orderId: 1,
+    quantity: 1,
+    unitPrice: 9.99,
+  });
+  res.send(row);
 });
