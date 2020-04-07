@@ -47,6 +47,13 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       }),
+      Category.upsert({
+        name: "Biography",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/71tdxrc-IuL.jpg",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      }),
     ]);
   },
 
