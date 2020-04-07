@@ -69,7 +69,8 @@ module.exports = {
         
         Gathering in one place for the first time previously unpublished work, as well as already classic essays, such as, "Joy," and, "Find Your Beach," Feel Free offers a survey of important recent events in culture and politics, as well as Smith's own life. Equally at home in the world of good books and bad politics, Brooklyn-born rappers and the work of Swiss novelists, she is by turns wry, heartfelt, indignant, and incisive--and never any less than perfect company. This is literary journalism at its zenith.`,
         price: "16.19",
-        imageUrl: "./images/feel.jpg",
+        imageUrl:
+          "https://www.boekmeter.nl/images/cover/68000/68950.jpg?cb=1511620263",
         price_percentage: 100,
         categoryId: 1,
         createdAt: new Date(),
@@ -80,7 +81,8 @@ module.exports = {
         name: "The Carrying: Poems",
         author: "Limon Ada",
         price: "18.71",
-        imageUrl: "./images/carrying.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/819TAyixrdL.jpg",
         price_percentage: 100,
         categoryId: 3,
         description: `Vulnerable, tender, acute, these are serious poems, brave poems, exploring with honesty the ambiguous moment between the rapture of youth and the grace of acceptance. A daughter tends to aging parents. A woman struggles with infertility—“What if, instead of carrying / a child, I am supposed to carry grief?”—and a body seized by pain and vertigo as well as ecstasy. A nation convulses: “Every song of this country / has an unsung third stanza, something brutal.” And still Limón shows us, as ever, the persistence of hunger, love, and joy, the dizzying fullness of our too-short lives. “Fine then, / I’ll take it,” she writes. “I’ll take it all.”
@@ -94,7 +96,8 @@ module.exports = {
         name: "There There: A novel",
         author: "Tommy Orange",
         price: "10.27",
-        imageUrl: "./images/there.jpg",
+        imageUrl:
+          "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1512071034l/36692478.jpg",
         price_percentage: 100,
         categoryId: 1,
         description: `Tommy Orange’s “groundbreaking, extraordinary” (The New York Times) There There is the “brilliant, propulsive” (People Magazine) story of twelve unforgettable characters, Urban Indians living in Oakland, California, who converge and collide on one fateful day. It’s “the year’s most galvanizing debut novel” (Entertainment Weekly).
@@ -110,7 +113,8 @@ module.exports = {
         name: "The Overstory: A Novel",
         author: "Richard Powers",
         price: "11.39",
-        imageUrl: "./images/overstory.jpg",
+        imageUrl:
+          "https://s.s-bol.com/imgbase0/imagebase3/large/FC/8/4/4/6/9200000094426448.jpg",
         price_percentage: 100,
         categoryId: 1,
 
@@ -125,7 +129,8 @@ module.exports = {
         name: "Fairview",
         author: "Jackie Sibblies Drury",
         price: "11.67",
-        imageUrl: "./images/fairview.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/5179ivOAqGL._SX314_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 1,
         description: `“Dazzling and ruthless…One of the most exquisitely and systematically arranged ambushes of an unsuspecting audience in years…A glorious, scary reminder of the unmatched power of live theater to rattle, roil and shake us wide awake.” —Ben Brantley, New York Times
@@ -139,7 +144,8 @@ module.exports = {
         name: "The New Negro: The Life of Alain Locke",
         author: "Jeffrey C. Stewart",
         price: "27.88",
-        imageUrl: "./images/new.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51h5nGq5WAL._SX327_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 7,
         description: `A tiny, fastidiously dressed man emerged from Black Philadelphia around the turn of the century to mentor a generation of young artists including Langston Hughes, Zora Neale Hurston, and Jacob Lawrence and call them the New Negro -- the creative African Americans whose art, literature, music, and drama would inspire Black people to greatness.
@@ -155,7 +161,8 @@ module.exports = {
         name: "Be With",
         author: "Forrest Gander",
         price: "10.99",
-        imageUrl: "./images/be.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/41nEnSHIJoL._SX312_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 3,
         description: `Forrest Gander’s first book of poems since his Pulitzer finalist Core Samples from the World: a startling look through loss, grief, and regret into the exquisite nature of intimacy
@@ -169,7 +176,8 @@ module.exports = {
         name: "Amity and Prosperity: One Family and the Fracturing of America",
         author: "Eliza Griswold",
         price: "11.39",
-        imageUrl: "./images/amity.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51uWPaC8ORL._SX331_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 3,
         description: `In Amity and Prosperity, the prizewinning poet and journalist Eliza Griswold tells the story of the energy boom’s impact on a small town at the edge of Appalachia and one woman’s transformation from a struggling single parent to an unlikely activist.
@@ -185,7 +193,8 @@ module.exports = {
         name: "SUQAR: Desserts & Sweets from the Modern Middle East",
         author: "Greg Malouf",
         price: "27.19",
-        imageUrl: "./images/suqar.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/411cRnXWnGL._SX399_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 5,
         description: `SUQAR (which means 'sugar' in Arabic) shares the secrets of more than 100 sweet treats inspired by Middle Eastern flavors – ranging from puddings and pastries, to ice creams, cookies, cakes, confectionary, fruity desserts and drinks.
@@ -202,7 +211,8 @@ module.exports = {
           "Canned: The Rise and Fall of Consumer Confidence in the American Food Industry (Volume 68) (California Studies in Food and Culture)",
         author: "Anna Zeide",
         price: "23.64",
-        imageUrl: "./images/canned.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51S4mvz8e-L._SX329_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 6,
         description: `2019 James Beard Foundation Book Award winner: Reference, History, and Scholarship
@@ -218,7 +228,8 @@ module.exports = {
         name: "Goat: Cooking and Eating",
         author: "James Whetlor",
         price: "18.99",
-        imageUrl: "./images/goat.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51CO5Wv1w6L._SX320_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 5,
         description: `We should all be eating more goat. It's sustainable, ethical, highly nutritious and low in calories. Why then does it remain so underused and misunderstood? This book tells the story of how food and farming culture developed in the west without the help of this staple of global agriculture, and showcases the best recipes from around the world using this fabulous beast. Utterly delicious cooked fast and lean or slow-cooked in curries, stews, braises and roasts, from kebabs to stir-fries to sausages, goat is the one meat we should all be eating more often. With 100 dishes created by Cabrito's founder James Whetlor, plus a foreword by Hugh Fearnley-Whittingstall, and guest recipes from world-renowned chefs including Yotam Ottolenghi, Gill Meller, Neil Rankin and Jeremy Lee, Goat is a ground-breaking, bold cookbook.
@@ -235,7 +246,8 @@ module.exports = {
           "Milk Street: Tuesday Nights: More than 200 Simple Weeknight Suppers that Deliver Bold Flavor, Fast",
         author: "Christopher Kimball",
         price: "23.19",
-        imageUrl: "./images/milk.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51KJj-twdlL._SX397_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 5,
         description: `At Christopher Kimball's Milk Street, Tuesdays are the new Saturdays. That means every Tuesday Nights recipe delivers big, bold flavors, but the cooking is quick and easy--simple enough for the middle of the week.`,
@@ -248,7 +260,8 @@ module.exports = {
           "Eat a Little Better: Great Flavor, Good Health, Better World: A Cookbook",
         author: "Sam Kass",
         price: "18.49",
-        imageUrl: "./images/eat.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51HQlKj5sDL._SX373_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 5,
         description: `This book lays out Kass's plan to eat a little better. Knowing that sustainability and healthfulness come most, well, sustainably when new habits and choices seem appealing rather than drastic and punitive, Kass shares his philosophy and methods to help make it easy to choose, cook, and eat delicious foods without depriving yourself of agency or pleasure. He knows that going organic, local, and so forth all the time is just not realistic for most people, and that's ok--it's all about choosing and doing a little better, and how those choices add up to big change. It's the philosophy he helped the Obamas instill in their home, both in Chicago and that big white one in Washington.`,
@@ -261,7 +274,8 @@ module.exports = {
           "Tokyo New Wave: 31 Chefs Defining Japan's Next Generation, with Recipes [A Cookbook]",
         author: "Andrea Fazzari",
         price: "26.98",
-        imageUrl: "./images/tokyo.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51IuBr8GwfL._SX364_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 5,
         description: `In a luxe collection filled with portraits, interviews, and recipes, author and photographer Andrea Fazzari explores the changing landscape of food in Tokyo, Japan. A young and charismatic generation is redefining what it means to be a chef in this celebrated food city. Open to the world and its influences, these chefs have traveled more than their predecessors, have lived abroad, speak other languages, and embrace social media. Yet they still remain distinctly Japanese, influenced by a style, tradition, and terroir to which they are inextricably linked. This combination of the old and the new is on display in Tokyo New Wave, a transporting cookbook and armchair travel guide that captures this moment in Japanese cuisine and brings it to a savvy global audience.`,
@@ -274,7 +288,8 @@ module.exports = {
           "Buttermilk Graffiti: A Chef's Journey to Discover America's New Melting-Pot Cuisine",
         author: "Edward Lee",
         price: "10.29",
-        imageUrl: "./images/buttermilk.jpg",
+        imageUrl:
+          "https://images-na.ssl-images-amazon.com/images/I/51dAG1sXbFL._SX345_BO1,204,203,200_.jpg",
         price_percentage: 100,
         categoryId: 5,
         description: `American food is the story of mash-ups. Immigrants arrive, cultures collide, and out of the push-pull come exciting new dishes and flavors. But for Edward Lee, who, like Anthony Bourdain or Gabrielle Hamilton, is as much a writer as he is a chef, that first surprising bite is just the beginning. What about the people behind the food? What about the traditions, the innovations, the memories?
