@@ -151,14 +151,8 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
 const authRouter = require("./routers/auth");
 app.use("/", authRouter);
 
-
-app.post("/addBook", async (req, res, next) => {
-  
-});
-
 const booksRouter = require("./routers/books");
 app.use("/", booksRouter);
-
 
 // Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
@@ -228,5 +222,3 @@ app.post("/order_details", async (req, res, next) => {
   });
   res.send(row);
 });
-
-Test-Colin
