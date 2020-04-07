@@ -3,8 +3,40 @@ module.exports = (sequelize, DataTypes) => {
   const user = sequelize.define(
     "user",
     {
-      name: {
+      first_name: {
         type: DataTypes.STRING,
+        allowNull: false
+      },
+      last_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      street: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      postal_code: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      house_number: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      city: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      country: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      phone: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
+      isAdmin: {
+        type: DataTypes.BOOLEAN,
         allowNull: false
       },
       email: {
@@ -20,7 +52,8 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   user.associate = function(models) {
-    // associations can be defined here
+    user.hasMany(models.review);
+    user.hasMany(models.order);
   };
   return user;
 };

@@ -1,56 +1,50 @@
 "use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable("users", {
+    return queryInterface.createTable("books", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
-      first_name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      last_name: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      street: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      postal_code: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      house_number: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      city: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      country: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
-      phone: {
+      ISBN: {
         type: Sequelize.INTEGER,
         allowNull: false,
-      },
-      isAdmin: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-      },
-      email: {
-        type: Sequelize.STRING,
         unique: true,
+      },
+      name: {
+        type: Sequelize.STRING,
         allowNull: false,
       },
-      password: {
+      author: {
         type: Sequelize.STRING,
+        allowNull: false,
+      },
+      description: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+      },
+      price: {
+        type: Sequelize.FLOAT,
+        allowNull: false,
+      },
+      imageUrl: {
+        type: Sequelize.TEXT,
+        allowNull: false,
+      },
+      categoryId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        reference: {
+          model: "category",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "SET NULL",
+      },
+      price_percentage: {
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       createdAt: {
@@ -64,6 +58,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("users");
+    return queryInterface.dropTable("books");
   },
 };
