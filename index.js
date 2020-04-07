@@ -148,8 +148,13 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
   });
 });
 
+const test = 'test conflict'
+
 const authRouter = require("./routers/auth");
 app.use("/", authRouter);
+
+const categoryRouter = require("./routers/homepage");
+app.use("/category", categoryRouter)
 
 const booksRouter = require("./routers/books");
 app.use("/", booksRouter);
