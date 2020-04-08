@@ -21,7 +21,7 @@ router.post("/login", async (req, res, next) => {
 
     if (!user || !bcrypt.compareSync(password, user.password)) {
       return res.status(400).send({
-        message: "User with that email not found or password incorrect"
+        message: "User with that email not found or password incorrect",
       });
     }
 
@@ -35,16 +35,48 @@ router.post("/login", async (req, res, next) => {
 });
 
 router.post("/signup", async (req, res) => {
-  const { email, password, name } = req.body;
-  if (!email || !password || !name) {
-    return res.status(400).send("Please provide an email, password and a name");
+  console.log("request body", req.body);
+  const {
+    firstName,
+    lastName,
+    phone,
+    email,
+    password,
+    street,
+    postalCode,
+    houseNumber,
+    city,
+    country,
+  } = req.body;
+
+  if (
+    !firstName ||
+    !lastName ||
+    !phone ||
+    !email ||
+    !password ||
+    !street ||
+    !postalCode ||
+    !houseNumber ||
+    !city ||
+    !country
+  ) {
+    return res.status(400).send("Please provide all fields!");
   }
 
   try {
     const newUser = await User.create({
+      first_name: firstName,
+      last_name: lastName,
+      phone,
       email,
       password: bcrypt.hashSync(password, SALT_ROUNDS),
-      name
+      street,
+      postal_code: postalCode,
+      house_number: houseNumber,
+      city,
+      country,
+      isAdmin: false,
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
@@ -59,7 +91,11 @@ router.post("/signup", async (req, res) => {
         .send({ message: "There is an existing account with this email" });
     }
 
-    return res.status(400).send({ message: "Something went wrong, sorry" });
+    return res.status(400).send({
+      message: `Something went wrong, sorry
+      ${error}
+      `,
+    });
   }
 });
 
