@@ -35,7 +35,20 @@ router.post("/login", async (req, res, next) => {
 });
 
 router.post("/signup", async (req, res) => {
-  const { email, password, name } = req.body;
+  console.log("request body", req.body);
+  const {
+    firstName,
+    lastName,
+    phone,
+    email,
+    password,
+    street,
+    postalCode,
+    houseNumber,
+    city,
+    country,
+  } = req.body;
+
   if (
     !firstName ||
     !lastName ||
@@ -53,16 +66,17 @@ router.post("/signup", async (req, res) => {
 
   try {
     const newUser = await User.create({
-      firstName,
-      lastName,
+      first_name: firstName,
+      last_name: lastName,
       phone,
       email,
       password: bcrypt.hashSync(password, SALT_ROUNDS),
       street,
-      postalCode,
-      houseNumber,
+      postal_code: postalCode,
+      house_number: houseNumber,
       city,
       country,
+      isAdmin: false,
     });
 
     delete newUser.dataValues["password"]; // don't send back the password hash
@@ -77,7 +91,11 @@ router.post("/signup", async (req, res) => {
         .send({ message: "There is an existing account with this email" });
     }
 
-    return res.status(400).send({ message: "Something went wrong, sorry" });
+    return res.status(400).send({
+      message: `Something went wrong, sorry
+      ${error}
+      `,
+    });
   }
 });
 
