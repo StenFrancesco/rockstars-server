@@ -70,7 +70,7 @@ module.exports = {
         Gathering in one place for the first time previously unpublished work, as well as already classic essays, such as, "Joy," and, "Find Your Beach," Feel Free offers a survey of important recent events in culture and politics, as well as Smith's own life. Equally at home in the world of good books and bad politics, Brooklyn-born rappers and the work of Swiss novelists, she is by turns wry, heartfelt, indignant, and incisive--and never any less than perfect company. This is literary journalism at its zenith.`,
         price: "16.19",
         imageUrl:
-          "https://www.boekmeter.nl/images/cover/68000/68950.jpg?cb=1511620263",
+          "https://www.boekmeter.nl/images/cover/68000/68950.jpg",
         price_percentage: 100,
         categoryId: 1,
         createdAt: new Date(),
