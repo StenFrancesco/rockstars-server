@@ -148,9 +148,6 @@ app.post("/authorized_post_request", authMiddleWare, (req, res) => {
   });
 });
 
-const addBookRouter = require("./routers/addBook");
-app.use("/", addBookRouter);
-
 const authRouter = require("./routers/auth");
 app.use("/", authRouter);
 
