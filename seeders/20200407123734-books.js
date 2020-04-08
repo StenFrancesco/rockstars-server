@@ -83,7 +83,7 @@ module.exports = {
         price: "18.71",
         imageUrl:
           "https://images-na.ssl-images-amazon.com/images/I/819TAyixrdL.jpg",
-        price_percentage: 100,
+        price_percentage: 90,
         categoryId: 3,
         description: `Vulnerable, tender, acute, these are serious poems, brave poems, exploring with honesty the ambiguous moment between the rapture of youth and the grace of acceptance. A daughter tends to aging parents. A woman struggles with infertility—“What if, instead of carrying / a child, I am supposed to carry grief?”—and a body seized by pain and vertigo as well as ecstasy. A nation convulses: “Every song of this country / has an unsung third stanza, something brutal.” And still Limón shows us, as ever, the persistence of hunger, love, and joy, the dizzying fullness of our too-short lives. “Fine then, / I’ll take it,” she writes. “I’ll take it all.”
     
@@ -115,7 +115,7 @@ module.exports = {
         price: "11.39",
         imageUrl:
           "https://s.s-bol.com/imgbase0/imagebase3/large/FC/8/4/4/6/9200000094426448.jpg",
-        price_percentage: 100,
+        price_percentage: 80,
         categoryId: 1,
 
         description: `"The best novel ever written about trees, and really just one of the best novels, period." ―Ann Patchett
@@ -146,7 +146,7 @@ module.exports = {
         price: "27.88",
         imageUrl:
           "https://images-na.ssl-images-amazon.com/images/I/51h5nGq5WAL._SX327_BO1,204,203,200_.jpg",
-        price_percentage: 100,
+        price_percentage: 75,
         categoryId: 7,
         description: `A tiny, fastidiously dressed man emerged from Black Philadelphia around the turn of the century to mentor a generation of young artists including Langston Hughes, Zora Neale Hurston, and Jacob Lawrence and call them the New Negro -- the creative African Americans whose art, literature, music, and drama would inspire Black people to greatness.
     
@@ -195,7 +195,7 @@ module.exports = {
         price: "27.19",
         imageUrl:
           "https://images-na.ssl-images-amazon.com/images/I/411cRnXWnGL._SX399_BO1,204,203,200_.jpg",
-        price_percentage: 100,
+        price_percentage: 85,
         categoryId: 5,
         description: `SUQAR (which means 'sugar' in Arabic) shares the secrets of more than 100 sweet treats inspired by Middle Eastern flavors – ranging from puddings and pastries, to ice creams, cookies, cakes, confectionary, fruity desserts and drinks.
     
@@ -262,7 +262,7 @@ module.exports = {
         price: "18.49",
         imageUrl:
           "https://images-na.ssl-images-amazon.com/images/I/51HQlKj5sDL._SX373_BO1,204,203,200_.jpg",
-        price_percentage: 100,
+        price_percentage: 90,
         categoryId: 5,
         description: `This book lays out Kass's plan to eat a little better. Knowing that sustainability and healthfulness come most, well, sustainably when new habits and choices seem appealing rather than drastic and punitive, Kass shares his philosophy and methods to help make it easy to choose, cook, and eat delicious foods without depriving yourself of agency or pleasure. He knows that going organic, local, and so forth all the time is just not realistic for most people, and that's ok--it's all about choosing and doing a little better, and how those choices add up to big change. It's the philosophy he helped the Obamas instill in their home, both in Chicago and that big white one in Washington.`,
         createdAt: new Date(),
