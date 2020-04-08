@@ -22,25 +22,4 @@ router.get("/books", async (req, res) => {
   }
 });
 
-// router.post("/category", authMiddleware, async (req, res) => {
-//   const { name, libraryId } = req.body;
-//   if (!name || !libraryId) {
-//     return res.status(400).send("Something went wrong with the input, sorry");
-//   }
-
-//   try {
-//     const newCategory = await Category.create({
-//       name,
-//       libraryId,
-//     });
-
-//     return res.status(200).send(newCategory);
-//   } catch (error) {
-//     console.error("Error message: ", error.message);
-//     return res
-//       .status(500)
-//       .send({ message: "something went wrong within the server" });
-//   }
-// });
-
 module.exports = router;
