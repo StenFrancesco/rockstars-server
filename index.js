@@ -1,81 +1,14 @@
 const express = require("express");
 const app = express();
 
-/**
- * Middlewares
- *
- * It is advisable to configure your middleware before configuring the routes
- * If you configure routes before the middleware, these routes will not use them
- *
- */
-
-/**
- * morgan:
- *
- * simple logging middleware so you can see
- * what happened to your request
- *
- * example:
- *
- * METHOD   PATH        STATUS  RESPONSE_TIME   - Content-Length
- *
- * GET      /           200     1.807 ms        - 15
- * POST     /echo       200     10.251 ms       - 26
- * POST     /puppies    404     1.027 ms        - 147
- *
- * github: https://github.com/expressjs/morgan
- *
- */
-
 const loggerMiddleWare = require("morgan");
 app.use(loggerMiddleWare("dev"));
-
-/**
- *
- * express.json():
- * be able to read request bodies of JSON requests
- * a.k.a. body-parser
- * Needed to be able to POST / PUT / PATCH
- *
- * docs: https://expressjs.com/en/api.html#express.json
- *
- */
 
 const bodyParserMiddleWare = express.json();
 app.use(bodyParserMiddleWare);
 
-/**
- *
- * cors middleware:
- *
- * Since our api is hosted on a different domain than our client
- * we are are doing "Cross Origin Resource Sharing" (cors)
- * Cross origin resource sharing is disabled by express by default
- * for safety reasons (should everybody be able to use your api, I don't think so!)
- *
- * We are configuring cors to accept all incoming requests
- * If you want to limit this, you can look into "white listing" only certain domains
- *
- * docs: https://expressjs.com/en/resources/middleware/cors.html
- *
- */
-
 const corsMiddleWare = require("cors");
 app.use(corsMiddleWare());
-
-/**
- *
- * delay middleware
- *
- * Since our api and client run on the same machine in development mode
- * the request come in within milliseconds
- * To simulate normal network traffic this simple middleware delays
- * the incoming requests by 1500 second
- * This allows you to practice with showing loading spinners in the client
- *
- * - it's only used when you use npm run dev to start your app
- * - the delay time can be configured in the package.json
- */
 
 if (process.env.DELAY) {
   app.use((req, res, next) => {
@@ -157,71 +90,8 @@ app.use("/category", categoryRouter)
 const booksRouter = require("./routers/books");
 app.use("/", booksRouter);
 
-// Listen for connections on specified port (default is port 4000)
 const { PORT } = require("./config/constants");
 
 app.listen(PORT, () => {
   console.log(`Listening on port: ${PORT}`);
-});
-
-const Category = require("./models").category;
-app.post("/categorie", async (req, res, next) => {
-  const row = await Category.create({
-    name: "Bla",
-    imageUrl: "balbala",
-  });
-  res.send(row);
-});
-
-const Books = require("./models").book;
-app.post("/books", async (req, res, next) => {
-  const row = await Books.create({
-    ISBN: 91834,
-    name: "Blabla",
-    author: "lajd",
-    description: "kjahdf",
-    price: 9.6,
-    imageUrl: "balbala",
-    categoryId: 1,
-    price_percentage: 100,
-  });
-  res.send(row);
-});
-
-const Orders = require("./models").order;
-app.post("/order", async (req, res, next) => {
-  const row = await Orders.create({
-    order_placed: true,
-    userId: 1,
-  });
-  res.send(row);
-});
-
-const Users = require("./models").user;
-app.post("/user", async (req, res, next) => {
-  const row = await Users.create({
-    first_name: "kjadshf",
-    last_name: "kjhadf",
-    street: "hasdf",
-    postal_code: "5839PA",
-    house_number: 19,
-    city: "Amsterdam",
-    country: "Netherlands",
-    phone: 489572,
-    isAdmin: false,
-    email: "test@gmail.com",
-    password: "nicenice",
-  });
-  res.send(row);
-});
-
-const OrderDetails = require("./models").orderDetail;
-app.post("/order_details", async (req, res, next) => {
-  const row = await OrderDetails.create({
-    bookId: 1,
-    orderId: 1,
-    quantity: 1,
-    unitPrice: 9.99,
-  });
-  res.send(row);
 });
