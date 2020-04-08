@@ -2,6 +2,7 @@ const { Router } = require("express");
 const Book = require("../models/").book;
 const Category = require("../models/").category;
 const Review = require("../models/").review;
+const User = require("../models/").user;
 const auth = require("../auth/middleware");
 
 const router = new Router();
@@ -9,7 +10,20 @@ const router = new Router();
 router.get("/books", async (req, res) => {
   try {
     const books = await Book.findAll({
-        include: [Review, Category],
+      include: [
+        {
+          model: Category,
+        },
+        {
+          model: Review,
+          include: [
+            {
+              model: User,
+              attributes: ["first_name"],
+            },
+          ],
+        },
+      ],
       order: [["name", "ASC"]],
     });
 
@@ -22,7 +36,7 @@ router.get("/books", async (req, res) => {
   }
 });
 
-router.post("/user/add-book",auth, async (req, res) => {
+router.post("/user/add-book", auth, async (req, res) => {
   const {
     ISBN,
     name,
@@ -32,7 +46,7 @@ router.post("/user/add-book",auth, async (req, res) => {
     imageUrl,
     categoryId,
     price_percentage,
-    userId
+    userId,
   } = req.body;
   if (!userId === req.user.id) {
     return res
@@ -72,6 +86,5 @@ router.post("/user/add-book",auth, async (req, res) => {
       .send({ message: "something went wrong within the server" });
   }
 });
-
 
 module.exports = router;
