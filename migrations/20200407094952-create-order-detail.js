@@ -1,18 +1,18 @@
-'use strict';
+"use strict";
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('orderDetails', {
+    return queryInterface.createTable("orderDetails", {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
       },
       bookId: {
         type: Sequelize.INTEGER,
         allowNull: false,
         reference: {
-          model: "book",
+          model: "books",
           key: "id",
         },
         onUpdate: "CASCADE",
@@ -39,15 +39,15 @@ module.exports = {
       },
       createdAt: {
         allowNull: false,
-        type: Sequelize.DATE
+        type: Sequelize.DATE,
       },
       updatedAt: {
         allowNull: false,
-        type: Sequelize.DATE
-      }
+        type: Sequelize.DATE,
+      },
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('orderDetails');
-  }
+    return queryInterface.dropTable("orderDetails");
+  },
 };
