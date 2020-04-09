@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   );
   order.associate = function (models) {
     order.belongsTo(models.user);
-    order.belongsToMany(models.book, {
+    order.belongsToMany(models.orderDetails, {
       through: "orderDetail",
       foreignKey: "orderId",
     });
