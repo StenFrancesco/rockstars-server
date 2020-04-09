@@ -16,11 +16,11 @@ if (process.env.DELAY) {
   });
 }
 
-const authRouter = require("./routers/auth");
-app.use("/", authRouter);
+const userRouter = require("./routers/user");
+app.use("/", userRouter);
 
 const categoryRouter = require("./routers/homepage");
-app.use("/category", categoryRouter)
+app.use("/category", categoryRouter);
 
 const booksRouter = require("./routers/books");
 app.use("/", booksRouter);

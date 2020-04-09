@@ -16,6 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   orderDetail.associate = function (models) {
+    orderDetail.belongsTo(models.order);
+    orderDetail.belongsTo(models.book);
   };
   return orderDetail;
 };
